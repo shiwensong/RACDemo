@@ -1,18 +1,18 @@
 //
-//  RACDemoUITests.m
-//  RACDemoUITests
+//  RACDemo_JenkinsUITests.m
+//  RACDemo_JenkinsUITests
 //
-//  Created by 施文松 on 2017/9/13.
+//  Created by 施文松 on 2017/9/18.
 //  Copyright © 2017年 施文松. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface RACDemoUITests : XCTestCase
+@interface RACDemo_JenkinsUITests : XCTestCase
 
 @end
 
-@implementation RACDemoUITests
+@implementation RACDemo_JenkinsUITests
 
 - (void)setUp {
     [super setUp];

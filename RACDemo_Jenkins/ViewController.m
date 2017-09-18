@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"登录" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
@@ -36,7 +36,7 @@
     [self.view addSubview:button];
     WS(ws);
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.center.equalTo(ws.view);
+        make.center.equalTo(ws.view);
     }];
     
     RAC(self, userName) = self.accountTextField.rac_textSignal;
@@ -84,23 +84,23 @@
     RAC(self.loginButton, enabled) = comSignal;
     
     
-//    [[comSignal timeout:15 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSError *error) {
-//        NSLog(@"等了你15秒，你还没有结果，已经超时了.");
-//    }];
-//
-//    /// 延迟20秒执行
-//    [[comSignal delay:20] subscribeNext:^(id x) {
-//        NSLog(@"我在路上耽搁了20秒时间");
-//    }];
+    //    [[comSignal timeout:15 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSError *error) {
+    //        NSLog(@"等了你15秒，你还没有结果，已经超时了.");
+    //    }];
+    //
+    //    /// 延迟20秒执行
+    //    [[comSignal delay:20] subscribeNext:^(id x) {
+    //        NSLog(@"我在路上耽搁了20秒时间");
+    //    }];
     
     
     //// 定时任务是从3秒后开始的，开始的时候不会执行，
-//    RACSignal *signal1 = [RACSignal interval:3 onScheduler:[RACScheduler mainThreadScheduler]];
-//    NSLog(@"开始计算时间");
-//    [signal1 subscribeNext:^(id x) {
-//       // 定时任务每3秒执行一次
-//        NSLog(@"3秒过去了");
-//    }];
+    //    RACSignal *signal1 = [RACSignal interval:3 onScheduler:[RACScheduler mainThreadScheduler]];
+    //    NSLog(@"开始计算时间");
+    //    [signal1 subscribeNext:^(id x) {
+    //       // 定时任务每3秒执行一次
+    //        NSLog(@"3秒过去了");
+    //    }];
     
     RACSignal *signal2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
@@ -151,10 +151,10 @@
     }] subscribeCompleted:^{
         NSLog(@"RAC新号串结束了");
     }];
-//    :^(id x) {
-//        NSLog(@"RAC新号串结束了");
-//    }];
-//
+    //    :^(id x) {
+    //        NSLog(@"RAC新号串结束了");
+    //    }];
+    //
     
     
     RACSignal *signal22 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -184,7 +184,7 @@
         if ([value isEqualToString:@"石头"]) {
             return @"金子";
         }
-         return value;
+        return value;
     }] subscribeNext:^(id x) {
         NSLog(@"遍历修改后的数据是 == %@", x);
     }];
@@ -230,25 +230,25 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"currentNotification" object:nil userInfo:@{@"name" : @"施文松", @"age" : @"25"}];
     
     
-//    RACSignal *signal00 = [self rac_signalForSelector:@selector(touchesBegan:withEvent:)];
-//    [signal00 subscribeNext:^(RACTuple *tuple) {
-//        NSLog(@"第一个参数是 == %@，第二个参数是 == %@",tuple.first, tuple.second);
-//    }];
+    //    RACSignal *signal00 = [self rac_signalForSelector:@selector(touchesBegan:withEvent:)];
+    //    [signal00 subscribeNext:^(RACTuple *tuple) {
+    //        NSLog(@"第一个参数是 == %@，第二个参数是 == %@",tuple.first, tuple.second);
+    //    }];
     
     [[self rac_signalForSelector:@selector(touchesBegan:withEvent:)] subscribeNext:^(id x) {
         NSLog(@"点击了视图");
     }];
     
     
-//    [[self rac_signalForSelector:@selector(touchesBegan:withEvent:)] subscribeNext:^(id x) {
-////        NSLog(@"第一个参数是 == %@，第二个参数是 == %@",);
-//        NSLog(@"点击了View");
-//    }];
+    //    [[self rac_signalForSelector:@selector(touchesBegan:withEvent:)] subscribeNext:^(id x) {
+    ////        NSLog(@"第一个参数是 == %@，第二个参数是 == %@",);
+    //        NSLog(@"点击了View");
+    //    }];
     
     
     
     
-
+    
     
     
     
@@ -257,7 +257,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-        
+    
     
 }
 
