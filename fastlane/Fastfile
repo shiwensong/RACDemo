@@ -1,0 +1,4 @@
+lane :beta do
+  gym(export_method: "ad-hoc")
+  pgyer(api_key: "c3d8bcc8500e829e76cbd444b653232b", user_key: "aa035cd970fb78660c6129670e473651", update_description: "update by fastlane")
+end
